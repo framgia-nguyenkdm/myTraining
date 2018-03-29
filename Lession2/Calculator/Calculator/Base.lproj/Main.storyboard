@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0zJ-zg-VqL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kqx-Mx-U2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nE-5g-nSO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXI-Nv-gGu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpW-TQ-3cB">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kpW-TQ-3cB" secondAttribute="trailing" id="Aus-U4-TYI"/>
+                                            <constraint firstAttribute="bottom" secondItem="kpW-TQ-3cB" secondAttribute="bottom" id="LRB-hx-Yr2"/>
+                                            <constraint firstItem="kpW-TQ-3cB" firstAttribute="top" secondItem="iXI-Nv-gGu" secondAttribute="top" id="Lhc-dL-FG3"/>
+                                            <constraint firstItem="kpW-TQ-3cB" firstAttribute="leading" secondItem="iXI-Nv-gGu" secondAttribute="leading" id="Y0K-I9-SzF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jP0-qA-ahe">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="108"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o2-Io-yKO">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277425993395" green="0.85836406662056486" blue="0.85836406662056486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnS-1o-KED"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWe-oi-FoC">
+                                                <rect key="frame" x="188" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277425993395" green="0.85836406662056486" blue="0.85836406662056486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapModBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4uO-aS-0kc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqy-Vc-uyx">
+                                                <rect key="frame" x="282" y="0.0" width="93" height="108"/>
+                                                <color key="backgroundColor" red="0.96870177984237671" green="0.57434099912643433" blue="0.19289806485176086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapDevideBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w61-5M-PO2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-5w-5gx">
+                                                <rect key="frame" x="94" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277425993395" green="0.85836406662056486" blue="0.85836406662056486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="RWe-oi-FoC" firstAttribute="leading" secondItem="nHg-5w-5gx" secondAttribute="trailing" id="21V-Yq-8xs"/>
+                                            <constraint firstAttribute="bottom" secondItem="hqy-Vc-uyx" secondAttribute="bottom" id="3WP-yY-xqs"/>
+                                            <constraint firstAttribute="trailing" secondItem="hqy-Vc-uyx" secondAttribute="trailing" id="EdJ-YV-L2b"/>
+                                            <constraint firstItem="hqy-Vc-uyx" firstAttribute="leading" secondItem="RWe-oi-FoC" secondAttribute="trailing" id="Kdz-NR-44c"/>
+                                            <constraint firstItem="hqy-Vc-uyx" firstAttribute="top" secondItem="jP0-qA-ahe" secondAttribute="top" id="Se2-o2-Ej5"/>
+                                            <constraint firstAttribute="bottom" secondItem="6o2-Io-yKO" secondAttribute="bottom" id="V9w-sn-1tD"/>
+                                            <constraint firstItem="RWe-oi-FoC" firstAttribute="top" secondItem="jP0-qA-ahe" secondAttribute="top" id="dfH-ad-o2f"/>
+                                            <constraint firstAttribute="bottom" secondItem="nHg-5w-5gx" secondAttribute="bottom" id="ebG-fH-M6u"/>
+                                            <constraint firstItem="6o2-Io-yKO" firstAttribute="width" secondItem="jP0-qA-ahe" secondAttribute="width" multiplier="1/4" id="fae-dF-z6W"/>
+                                            <constraint firstItem="nHg-5w-5gx" firstAttribute="top" secondItem="jP0-qA-ahe" secondAttribute="top" id="i6m-D7-Eg8"/>
+                                            <constraint firstItem="nHg-5w-5gx" firstAttribute="width" secondItem="jP0-qA-ahe" secondAttribute="width" multiplier="1/4" id="oMe-76-Lq4"/>
+                                            <constraint firstItem="nHg-5w-5gx" firstAttribute="leading" secondItem="6o2-Io-yKO" secondAttribute="trailing" id="qZt-fH-WZN"/>
+                                            <constraint firstAttribute="bottom" secondItem="RWe-oi-FoC" secondAttribute="bottom" id="tTQ-3c-69v"/>
+                                            <constraint firstItem="6o2-Io-yKO" firstAttribute="top" secondItem="jP0-qA-ahe" secondAttribute="top" id="vlj-OZ-uil"/>
+                                            <constraint firstItem="6o2-Io-yKO" firstAttribute="leading" secondItem="jP0-qA-ahe" secondAttribute="leading" id="x6S-l4-ywk"/>
+                                            <constraint firstItem="RWe-oi-FoC" firstAttribute="width" secondItem="jP0-qA-ahe" secondAttribute="width" multiplier="1/4" id="zcf-wN-isM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeV-FN-QxW">
+                                        <rect key="frame" x="0.0" y="216" width="375" height="108"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-Yn-f6B">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap7Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1uj-a6-odu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syZ-oW-rfc">
+                                                <rect key="frame" x="94" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap8Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UIA-zt-Isg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lv-P4-8v8">
+                                                <rect key="frame" x="188" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap9Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndc-BT-Urz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yea-he-HLV">
+                                                <rect key="frame" x="282" y="0.0" width="93" height="108"/>
+                                                <color key="backgroundColor" red="0.96870177980000005" green="0.57434099910000003" blue="0.1928980649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapMultiplyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4b8-KR-Qr7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="syZ-oW-rfc" firstAttribute="leading" secondItem="oh3-Yn-f6B" secondAttribute="trailing" id="0nM-Xt-n1q"/>
+                                            <constraint firstAttribute="bottom" secondItem="syZ-oW-rfc" secondAttribute="bottom" id="3Q2-bP-3hH"/>
+                                            <constraint firstItem="Yea-he-HLV" firstAttribute="top" secondItem="IeV-FN-QxW" secondAttribute="top" id="65h-3l-w4a"/>
+                                            <constraint firstItem="syZ-oW-rfc" firstAttribute="top" secondItem="IeV-FN-QxW" secondAttribute="top" id="Bif-nE-p9a"/>
+                                            <constraint firstItem="oh3-Yn-f6B" firstAttribute="top" secondItem="IeV-FN-QxW" secondAttribute="top" id="D7X-Uv-kGc"/>
+                                            <constraint firstAttribute="bottom" secondItem="1lv-P4-8v8" secondAttribute="bottom" id="GBN-Bt-Nmc"/>
+                                            <constraint firstItem="oh3-Yn-f6B" firstAttribute="width" secondItem="IeV-FN-QxW" secondAttribute="width" multiplier="1/4" id="LkG-VK-Qo6"/>
+                                            <constraint firstItem="oh3-Yn-f6B" firstAttribute="leading" secondItem="IeV-FN-QxW" secondAttribute="leading" id="N58-MM-KWN"/>
+                                            <constraint firstItem="1lv-P4-8v8" firstAttribute="top" secondItem="IeV-FN-QxW" secondAttribute="top" id="Olb-QP-xSN"/>
+                                            <constraint firstItem="1lv-P4-8v8" firstAttribute="leading" secondItem="syZ-oW-rfc" secondAttribute="trailing" id="Vzf-ql-dBQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Yea-he-HLV" secondAttribute="bottom" id="Xea-VD-GhJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="oh3-Yn-f6B" secondAttribute="bottom" id="bVm-Kn-bgv"/>
+                                            <constraint firstItem="syZ-oW-rfc" firstAttribute="width" secondItem="IeV-FN-QxW" secondAttribute="width" multiplier="1/4" id="jII-QH-CwF"/>
+                                            <constraint firstItem="1lv-P4-8v8" firstAttribute="width" secondItem="IeV-FN-QxW" secondAttribute="width" multiplier="1/4" id="kJ6-xq-D11"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yea-he-HLV" secondAttribute="trailing" id="pEG-xp-3Qb"/>
+                                            <constraint firstItem="Yea-he-HLV" firstAttribute="leading" secondItem="1lv-P4-8v8" secondAttribute="trailing" id="vV2-oI-IFq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVv-qR-EPf">
+                                        <rect key="frame" x="0.0" y="324" width="375" height="108"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deA-eV-knt">
+                                                <rect key="frame" x="94" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap5Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GCI-Zc-RbB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJy-Cg-RDt">
+                                                <rect key="frame" x="188" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap6Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mzO-At-I7P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygw-rf-jHo">
+                                                <rect key="frame" x="282" y="0.0" width="93" height="108"/>
+                                                <color key="backgroundColor" red="0.96870177980000005" green="0.57434099910000003" blue="0.1928980649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapMinusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TPQ-hK-PI2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pew-0P-pkK">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap4Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChC-YH-eKh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Pew-0P-pkK" firstAttribute="top" secondItem="uVv-qR-EPf" secondAttribute="top" id="1HG-m6-BcL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pew-0P-pkK" secondAttribute="bottom" id="3j8-Uk-CFr"/>
+                                            <constraint firstItem="Ygw-rf-jHo" firstAttribute="top" secondItem="uVv-qR-EPf" secondAttribute="top" id="7gI-Kh-HNh"/>
+                                            <constraint firstItem="Pew-0P-pkK" firstAttribute="leading" secondItem="uVv-qR-EPf" secondAttribute="leading" id="7ve-wj-hLP"/>
+                                            <constraint firstItem="deA-eV-knt" firstAttribute="top" secondItem="uVv-qR-EPf" secondAttribute="top" id="DNr-Ae-eOZ"/>
+                                            <constraint firstItem="ZJy-Cg-RDt" firstAttribute="width" secondItem="uVv-qR-EPf" secondAttribute="width" multiplier="1/4" id="JVd-kM-EFy"/>
+                                            <constraint firstItem="deA-eV-knt" firstAttribute="leading" secondItem="Pew-0P-pkK" secondAttribute="trailing" id="SRR-E1-O3e"/>
+                                            <constraint firstItem="ZJy-Cg-RDt" firstAttribute="leading" secondItem="deA-eV-knt" secondAttribute="trailing" id="TOM-gk-0be"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ygw-rf-jHo" secondAttribute="bottom" id="Ubj-uY-f5f"/>
+                                            <constraint firstItem="ZJy-Cg-RDt" firstAttribute="top" secondItem="uVv-qR-EPf" secondAttribute="top" id="Waw-UM-WE5"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZJy-Cg-RDt" secondAttribute="bottom" id="ZVa-cZ-KgP"/>
+                                            <constraint firstAttribute="bottom" secondItem="deA-eV-knt" secondAttribute="bottom" id="ZeX-0K-XkU"/>
+                                            <constraint firstItem="deA-eV-knt" firstAttribute="width" secondItem="uVv-qR-EPf" secondAttribute="width" multiplier="1/4" id="cAd-a5-RPS"/>
+                                            <constraint firstItem="Ygw-rf-jHo" firstAttribute="leading" secondItem="ZJy-Cg-RDt" secondAttribute="trailing" id="d37-4m-YNV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ygw-rf-jHo" secondAttribute="trailing" id="nrm-v2-Us0"/>
+                                            <constraint firstItem="Pew-0P-pkK" firstAttribute="width" secondItem="uVv-qR-EPf" secondAttribute="width" multiplier="1/4" id="pfF-sp-yXc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZA-X7-UnR">
+                                        <rect key="frame" x="0.0" y="432" width="375" height="108"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tZ-XX-aFU">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap1Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqe-ZR-INN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-Qk-v4O">
+                                                <rect key="frame" x="94" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap2Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOO-tV-xq4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtD-6w-6ji">
+                                                <rect key="frame" x="188" y="0.0" width="94" height="108"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap3Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ng-Xd-ctg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBu-fo-x4b">
+                                                <rect key="frame" x="282" y="0.0" width="93" height="108"/>
+                                                <color key="backgroundColor" red="0.96870177980000005" green="0.57434099910000003" blue="0.1928980649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapPlusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGv-lc-Qzd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="L7v-Qk-v4O" firstAttribute="top" secondItem="2ZA-X7-UnR" secondAttribute="top" id="10P-X3-odu"/>
+                                            <constraint firstAttribute="bottom" secondItem="L7v-Qk-v4O" secondAttribute="bottom" id="1k4-rW-wJy"/>
+                                            <constraint firstItem="3tZ-XX-aFU" firstAttribute="top" secondItem="2ZA-X7-UnR" secondAttribute="top" id="3N6-M7-szq"/>
+                                            <constraint firstAttribute="bottom" secondItem="oBu-fo-x4b" secondAttribute="bottom" id="3zD-HI-DUu"/>
+                                            <constraint firstItem="oBu-fo-x4b" firstAttribute="top" secondItem="2ZA-X7-UnR" secondAttribute="top" id="9Ck-R7-X53"/>
+                                            <constraint firstItem="3tZ-XX-aFU" firstAttribute="leading" secondItem="2ZA-X7-UnR" secondAttribute="leading" id="HXS-Zh-0WA"/>
+                                            <constraint firstItem="DtD-6w-6ji" firstAttribute="width" secondItem="2ZA-X7-UnR" secondAttribute="width" multiplier="1/4" id="J3b-aL-haa"/>
+                                            <constraint firstAttribute="bottom" secondItem="3tZ-XX-aFU" secondAttribute="bottom" id="JVA-NM-qjH"/>
+                                            <constraint firstItem="L7v-Qk-v4O" firstAttribute="leading" secondItem="3tZ-XX-aFU" secondAttribute="trailing" id="QUM-dg-OYE"/>
+                                            <constraint firstItem="oBu-fo-x4b" firstAttribute="leading" secondItem="DtD-6w-6ji" secondAttribute="trailing" id="aV6-D7-Cr5"/>
+                                            <constraint firstItem="L7v-Qk-v4O" firstAttribute="width" secondItem="2ZA-X7-UnR" secondAttribute="width" multiplier="1/4" id="bsE-Sh-puG"/>
+                                            <constraint firstItem="DtD-6w-6ji" firstAttribute="leading" secondItem="L7v-Qk-v4O" secondAttribute="trailing" id="d0n-H2-kgP"/>
+                                            <constraint firstAttribute="trailing" secondItem="oBu-fo-x4b" secondAttribute="trailing" id="g5m-jP-2Cb"/>
+                                            <constraint firstAttribute="bottom" secondItem="DtD-6w-6ji" secondAttribute="bottom" id="gfT-nd-cvY"/>
+                                            <constraint firstItem="3tZ-XX-aFU" firstAttribute="width" secondItem="2ZA-X7-UnR" secondAttribute="width" multiplier="1/4" id="p3W-zL-Kij"/>
+                                            <constraint firstItem="DtD-6w-6ji" firstAttribute="top" secondItem="2ZA-X7-UnR" secondAttribute="top" id="uSg-Cl-Jye"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8v-sO-xno">
+                                        <rect key="frame" x="0.0" y="540" width="375" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45b-KI-s9r">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="107"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tap0Btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCu-7i-XWW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7p-nl-H0U">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="107"/>
+                                                <color key="backgroundColor" red="0.84942277430000002" green="0.85836406659999998" blue="0.85836406659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapDotBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxD-yd-1wr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97O-br-JeY">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="107"/>
+                                                <color key="backgroundColor" red="0.96870177980000005" green="0.57434099910000003" blue="0.1928980649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapResultBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hJ6-pN-U4m"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="97O-br-JeY" secondAttribute="bottom" id="2H0-UD-014"/>
+                                            <constraint firstItem="H7p-nl-H0U" firstAttribute="top" secondItem="E8v-sO-xno" secondAttribute="top" id="4Ms-DE-hEK"/>
+                                            <constraint firstItem="H7p-nl-H0U" firstAttribute="leading" secondItem="45b-KI-s9r" secondAttribute="trailing" id="ORL-1H-uMg"/>
+                                            <constraint firstItem="45b-KI-s9r" firstAttribute="top" secondItem="E8v-sO-xno" secondAttribute="top" id="PcQ-XL-lbj"/>
+                                            <constraint firstItem="H7p-nl-H0U" firstAttribute="width" secondItem="E8v-sO-xno" secondAttribute="width" multiplier="1/4" id="Tow-tu-MEn"/>
+                                            <constraint firstItem="97O-br-JeY" firstAttribute="leading" secondItem="H7p-nl-H0U" secondAttribute="trailing" id="Zu2-JJ-GNn"/>
+                                            <constraint firstItem="45b-KI-s9r" firstAttribute="leading" secondItem="E8v-sO-xno" secondAttribute="leading" id="bEV-ke-Rrj"/>
+                                            <constraint firstAttribute="bottom" secondItem="H7p-nl-H0U" secondAttribute="bottom" id="dXW-gd-Oto"/>
+                                            <constraint firstItem="97O-br-JeY" firstAttribute="top" secondItem="E8v-sO-xno" secondAttribute="top" id="eRM-cT-bGI"/>
+                                            <constraint firstAttribute="trailing" secondItem="97O-br-JeY" secondAttribute="trailing" id="f0L-3I-Blf"/>
+                                            <constraint firstAttribute="bottom" secondItem="45b-KI-s9r" secondAttribute="bottom" id="seI-1k-Jpz"/>
+                                            <constraint firstItem="45b-KI-s9r" firstAttribute="width" secondItem="E8v-sO-xno" secondAttribute="width" multiplier="1/2" id="tWv-FM-AE3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2ZA-X7-UnR" firstAttribute="top" secondItem="uVv-qR-EPf" secondAttribute="bottom" id="4cA-ef-USq"/>
+                                    <constraint firstItem="2ZA-X7-UnR" firstAttribute="leading" secondItem="2nE-5g-nSO" secondAttribute="leading" id="Afx-fM-bXy"/>
+                                    <constraint firstAttribute="bottom" secondItem="E8v-sO-xno" secondAttribute="bottom" id="IvR-FM-aBS"/>
+                                    <constraint firstItem="iXI-Nv-gGu" firstAttribute="leading" secondItem="2nE-5g-nSO" secondAttribute="leading" id="MX9-o2-EUV"/>
+                                    <constraint firstItem="uVv-qR-EPf" firstAttribute="top" secondItem="IeV-FN-QxW" secondAttribute="bottom" id="QK9-xc-Kpp"/>
+                                    <constraint firstItem="jP0-qA-ahe" firstAttribute="leading" secondItem="2nE-5g-nSO" secondAttribute="leading" id="QQN-NC-Mr1"/>
+                                    <constraint firstAttribute="trailing" secondItem="uVv-qR-EPf" secondAttribute="trailing" id="QqK-56-caP"/>
+                                    <constraint firstItem="2ZA-X7-UnR" firstAttribute="height" secondItem="2nE-5g-nSO" secondAttribute="height" multiplier="1/6" id="Uwl-J5-u41"/>
+                                    <constraint firstItem="iXI-Nv-gGu" firstAttribute="top" secondItem="2nE-5g-nSO" secondAttribute="top" id="abt-Q5-oZl"/>
+                                    <constraint firstAttribute="trailing" secondItem="E8v-sO-xno" secondAttribute="trailing" id="cEi-lX-aNh"/>
+                                    <constraint firstItem="E8v-sO-xno" firstAttribute="leading" secondItem="2nE-5g-nSO" secondAttribute="leading" id="cYO-8j-Urr"/>
+                                    <constraint firstItem="iXI-Nv-gGu" firstAttribute="height" secondItem="2nE-5g-nSO" secondAttribute="height" multiplier="1/6" id="ecr-dR-zY3"/>
+                                    <constraint firstItem="uVv-qR-EPf" firstAttribute="height" secondItem="2nE-5g-nSO" secondAttribute="height" multiplier="1/6" id="fRA-Z6-iyg"/>
+                                    <constraint firstAttribute="trailing" secondItem="iXI-Nv-gGu" secondAttribute="trailing" id="iNI-PR-raE"/>
+                                    <constraint firstAttribute="trailing" secondItem="IeV-FN-QxW" secondAttribute="trailing" id="k3U-0l-LW8"/>
+                                    <constraint firstItem="IeV-FN-QxW" firstAttribute="leading" secondItem="2nE-5g-nSO" secondAttribute="leading" id="lD6-NN-PSP"/>
+                                    <constraint firstItem="uVv-qR-EPf" firstAttribute="leading" secondItem="2nE-5g-nSO" secondAttribute="leading" id="oEW-9X-IdN"/>
+                                    <constraint firstItem="jP0-qA-ahe" firstAttribute="height" secondItem="2nE-5g-nSO" secondAttribute="height" multiplier="1/6" id="pIs-vV-Xes"/>
+                                    <constraint firstItem="IeV-FN-QxW" firstAttribute="height" secondItem="2nE-5g-nSO" secondAttribute="height" multiplier="1/6" id="rMo-B8-eYw"/>
+                                    <constraint firstItem="E8v-sO-xno" firstAttribute="top" secondItem="2ZA-X7-UnR" secondAttribute="bottom" id="sCO-08-5lk"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ZA-X7-UnR" secondAttribute="trailing" id="stG-kK-ZCz"/>
+                                    <constraint firstItem="IeV-FN-QxW" firstAttribute="top" secondItem="jP0-qA-ahe" secondAttribute="bottom" id="vGQ-ch-I5b"/>
+                                    <constraint firstAttribute="trailing" secondItem="jP0-qA-ahe" secondAttribute="trailing" id="wdq-AQ-Zhg"/>
+                                    <constraint firstItem="jP0-qA-ahe" firstAttribute="top" secondItem="iXI-Nv-gGu" secondAttribute="bottom" id="yop-qR-FOs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2nE-5g-nSO" secondAttribute="trailing" id="7T0-ay-RED"/>
+                            <constraint firstItem="2nE-5g-nSO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sfh-sI-W5a"/>
+                            <constraint firstItem="Kqx-Mx-U2h" firstAttribute="top" secondItem="2nE-5g-nSO" secondAttribute="bottom" id="aKk-zp-Izf"/>
+                            <constraint firstItem="2nE-5g-nSO" firstAttribute="top" secondItem="0zJ-zg-VqL" secondAttribute="bottom" id="bA1-aB-C6t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="kpW-TQ-3cB" id="xdK-Vr-vBI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
