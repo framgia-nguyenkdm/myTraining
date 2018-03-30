@@ -12,6 +12,11 @@
 		8D438105206DCBFB005F736E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D438103206DCBFB005F736E /* Main.storyboard */; };
 		8D438107206DCBFB005F736E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D438106206DCBFB005F736E /* Assets.xcassets */; };
 		8D43810A206DCBFB005F736E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D438108206DCBFB005F736E /* LaunchScreen.storyboard */; };
+		8D438113206DCCC0005F736E /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438112206DCCC0005F736E /* UIButton+.swift */; };
+		8D438117206DD8DF005F736E /* CodeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438116206DD8DF005F736E /* CodeUIViewController.swift */; };
+		8D438119206DDD57005F736E /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D438118206DDD57005F736E /* ScreenSize.swift */; };
+		8D43811C206DEB3F005F736E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43811B206DEB3F005F736E /* Colors.swift */; };
+		8D43811E206DEBA4005F736E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43811D206DEBA4005F736E /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		8D438106206DCBFB005F736E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D438109206DCBFB005F736E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D43810B206DCBFB005F736E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D438112206DCCC0005F736E /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		8D438116206DD8DF005F736E /* CodeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeUIViewController.swift; sourceTree = "<group>"; };
+		8D438118206DDD57005F736E /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		8D43811B206DEB3F005F736E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8D43811D206DEBA4005F736E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		8D4380FE206DCBFB005F736E /* Lession3_Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				8D43811A206DDE04005F736E /* Common */,
+				8D438111206DCCAD005F736E /* Extension */,
 				8D4380FF206DCBFB005F736E /* AppDelegate.swift */,
 				8D438101206DCBFB005F736E /* ViewController.swift */,
+				8D438116206DD8DF005F736E /* CodeUIViewController.swift */,
 				8D438103206DCBFB005F736E /* Main.storyboard */,
 				8D438106206DCBFB005F736E /* Assets.xcassets */,
 				8D438108206DCBFB005F736E /* LaunchScreen.storyboard */,
 				8D43810B206DCBFB005F736E /* Info.plist */,
 			);
 			path = Lession3_Calculator;
+			sourceTree = "<group>";
+		};
+		8D438111206DCCAD005F736E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D438112206DCCC0005F736E /* UIButton+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8D43811A206DDE04005F736E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8D438118206DDD57005F736E /* ScreenSize.swift */,
+				8D43811B206DEB3F005F736E /* Colors.swift */,
+				8D43811D206DEBA4005F736E /* Fonts.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D43811E206DEBA4005F736E /* Fonts.swift in Sources */,
+				8D438119206DDD57005F736E /* ScreenSize.swift in Sources */,
+				8D43811C206DEB3F005F736E /* Colors.swift in Sources */,
 				8D438102206DCBFB005F736E /* ViewController.swift in Sources */,
+				8D438117206DD8DF005F736E /* CodeUIViewController.swift in Sources */,
+				8D438113206DCCC0005F736E /* UIButton+.swift in Sources */,
 				8D438100206DCBFB005F736E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
