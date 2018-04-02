@@ -10,22 +10,22 @@ import UIKit
 
 class CodeUIViewController: UIViewController {
     var viewRed: UIView! = {
-        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height/2))
+        let view = UIView()
         view.backgroundColor = UIColor.red
         return view
     }()
     var viewBlue: UIView! = {
-        let view = UIView.init(frame: CGRect(x: 0, y: ScreenSize.height/2, width: ScreenSize.width/2, height: ScreenSize.height/2))
+        let view = UIView()
         view.backgroundColor = UIColor.blue
         return view
     }()
     var viewOrange: UIView! = {
-        let view = UIView.init(frame: CGRect(x: ScreenSize.width/2, y: ScreenSize.height/2, width: ScreenSize.width/2, height: ScreenSize.height/4))
+        let view = UIView()
         view.backgroundColor = UIColor.orange
         return view
     }()
     var viewGreen: UIView! = {
-        let view = UIView.init(frame: CGRect(x: ScreenSize.width/2, y: ScreenSize.height*3/4, width: ScreenSize.width/4, height: ScreenSize.height/4))
+        let view = UIView()
         view.backgroundColor = UIColor.green
         return view
     }()
@@ -34,6 +34,7 @@ class CodeUIViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         initUIWithCode()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,28 +43,24 @@ class CodeUIViewController: UIViewController {
     }
     
     func initViewRed(){
-        self.view.addSubview(viewRed)
-        let top = NSLayoutConstraint(item: viewRed, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1, constant: 0)
-        let left = NSLayoutConstraint(item: viewRed, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0)
-        let right = NSLayoutConstraint(item: viewRed, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: 0)
-        let height = NSLayoutConstraint(item: viewRed, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 1/2, constant: 0)
-        
-        viewRed.autoresizesSubviews = false
         viewRed.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(viewRed)
         
-        self.view.addConstraints([top,left,right,height])
+        viewRed.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        viewRed.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0).isActive = true
+        viewRed.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0).isActive = true
+        viewRed.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/2).isActive = true
     }
     
     func initViewBlue(){
-        self.view.addSubview(viewBlue)
-        let top = NSLayoutConstraint(item: viewBlue, attribute: .top, relatedBy: .equal, toItem: viewRed, attribute: .bottom, multiplier: 1, constant: 0)
-        let left = NSLayoutConstraint(item: viewBlue, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0)
-        let bottom = NSLayoutConstraint(item: viewBlue, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: 0)
-        let width = NSLayoutConstraint(item: viewBlue, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 1/2, constant: 0)
-        
-        viewBlue.autoresizesSubviews = false
         viewBlue.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addConstraints([top,left,bottom,width])
+        self.view.addSubview(viewBlue)
+        
+        viewBlue.topAnchor.constraint(equalTo: viewRed.bottomAnchor, constant: 0).isActive = true
+        viewBlue.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0).isActive = true
+        viewBlue.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1/2).isActive = true
+        viewBlue.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        
     }
     
     func initViewOrange(){
@@ -79,15 +76,14 @@ class CodeUIViewController: UIViewController {
     }
     
     func initViewGreen(){
+        viewGreen.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(viewGreen)
-        let top = NSLayoutConstraint(item: viewGreen, attribute: .top, relatedBy: .equal, toItem: viewOrange, attribute: .bottom, multiplier: 1, constant: 0)
-        let bottom = NSLayoutConstraint(item: viewGreen, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: 0)
-        let left = NSLayoutConstraint(item: viewGreen, attribute: .leading, relatedBy: .equal, toItem: viewBlue, attribute: .trailing, multiplier: 1, constant: 0)
-        let width = NSLayoutConstraint(item: viewGreen, attribute: .width, relatedBy: .equal, toItem: viewBlue, attribute: .width, multiplier: 1/2, constant: 0)
-
-        viewOrange.autoresizesSubviews = false
-        viewOrange.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addConstraints([top,left,bottom,width])
+        
+        viewGreen.topAnchor.constraint(equalTo: viewOrange.bottomAnchor, constant: 0).isActive = true
+        viewGreen.leftAnchor.constraint(equalTo: viewBlue.rightAnchor, constant: 0).isActive = true
+        viewGreen.widthAnchor.constraint(equalTo: viewOrange.widthAnchor, multiplier: 1/2).isActive = true
+        viewGreen.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        
     }
     
     func initUIWithCode(){
