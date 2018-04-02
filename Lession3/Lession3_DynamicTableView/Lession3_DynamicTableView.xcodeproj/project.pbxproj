@@ -12,6 +12,8 @@
 		8D227F8120720A7500F81029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D227F7F20720A7500F81029 /* Main.storyboard */; };
 		8D227F8320720A7500F81029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D227F8220720A7500F81029 /* Assets.xcassets */; };
 		8D227F8620720A7500F81029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D227F8420720A7500F81029 /* LaunchScreen.storyboard */; };
+		8D227F9120720B2300F81029 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D227F8F20720B2300F81029 /* CustomTableViewCell.swift */; };
+		8D227F9220720B2300F81029 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D227F9020720B2300F81029 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8D227F8220720A7500F81029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D227F8520720A7500F81029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D227F8720720A7500F81029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D227F8F20720B2300F81029 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8D227F9020720B2300F81029 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				8D227F7B20720A7500F81029 /* AppDelegate.swift */,
 				8D227F7D20720A7500F81029 /* ViewController.swift */,
+				8D227F8F20720B2300F81029 /* CustomTableViewCell.swift */,
+				8D227F9020720B2300F81029 /* CustomTableViewCell.xib */,
 				8D227F7F20720A7500F81029 /* Main.storyboard */,
 				8D227F8220720A7500F81029 /* Assets.xcassets */,
 				8D227F8420720A7500F81029 /* LaunchScreen.storyboard */,
@@ -125,6 +131,7 @@
 			files = (
 				8D227F8620720A7500F81029 /* LaunchScreen.storyboard in Resources */,
 				8D227F8320720A7500F81029 /* Assets.xcassets in Resources */,
+				8D227F9220720B2300F81029 /* CustomTableViewCell.xib in Resources */,
 				8D227F8120720A7500F81029 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D227F9120720B2300F81029 /* CustomTableViewCell.swift in Sources */,
 				8D227F7E20720A7500F81029 /* ViewController.swift in Sources */,
 				8D227F7C20720A7500F81029 /* AppDelegate.swift in Sources */,
 			);
