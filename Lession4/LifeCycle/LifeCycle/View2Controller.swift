@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  View2Controller.swift
 //  LifeCycle
 //
 //  Created by khuc.d.m.nguyen on 4/3/18.
@@ -8,36 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class View2Controller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("View1: Did Load")
+
+        // Do any additional setup after loading the view.
+         print("View2: Did Load")
     }
     override func viewDidAppear(_ animated: Bool) {
-        print("View1: Did Appear")
+        print("View2: Did Appear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("View1: Did Disappear")
+        print("View2: Did Disappear")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("View1: Will Appear")
+        print("View2: Will Appear")
     }
     override func viewWillDisappear(_ animated: Bool) {
-        print("View1: Will Disappear")
+        print("View2: Will Disappear")
     }
-    @IBAction func tapShowView2(_ sender: Any) {
-        self.performSegue(withIdentifier: "showView2", sender: nil)
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-
