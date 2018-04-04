@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D4DA8D02074603500964D90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DA8CF2074603500964D90 /* TableViewController.swift */; };
+		8D4DA8D32074605B00964D90 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DA8D12074605B00964D90 /* CustomTableViewCell.swift */; };
+		8D4DA8D42074605B00964D90 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4DA8D22074605B00964D90 /* CustomTableViewCell.xib */; };
+		8D4DA8D82074619300964D90 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DA8D72074619300964D90 /* City.swift */; };
 		8D6C150D207374F20035DC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C150C207374F20035DC6E /* AppDelegate.swift */; };
 		8D6C150F207374F20035DC6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C150E207374F20035DC6E /* ViewController.swift */; };
 		8D6C1512207374F20035DC6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6C1510207374F20035DC6E /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D4DA8CF2074603500964D90 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8D4DA8D12074605B00964D90 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8D4DA8D22074605B00964D90 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		8D4DA8D72074619300964D90 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		8D6C1509207374F20035DC6E /* TableViewBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6C150C207374F20035DC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D6C150E207374F20035DC6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D4DA8D52074614F00964D90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D4DA8D72074619300964D90 /* City.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D4DA8D62074615400964D90 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8D4DA8D12074605B00964D90 /* CustomTableViewCell.swift */,
+				8D4DA8D22074605B00964D90 /* CustomTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		8D6C1500207374F20035DC6E = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +79,11 @@
 		8D6C150B207374F20035DC6E /* TableViewBasic */ = {
 			isa = PBXGroup;
 			children = (
+				8D4DA8D62074615400964D90 /* TableViewCell */,
+				8D4DA8D52074614F00964D90 /* Model */,
 				8D6C150C207374F20035DC6E /* AppDelegate.swift */,
 				8D6C150E207374F20035DC6E /* ViewController.swift */,
+				8D4DA8CF2074603500964D90 /* TableViewController.swift */,
 				8D6C1510207374F20035DC6E /* Main.storyboard */,
 				8D6C1513207374F20035DC6E /* Assets.xcassets */,
 				8D6C1515207374F20035DC6E /* LaunchScreen.storyboard */,
@@ -125,6 +153,7 @@
 			files = (
 				8D6C1517207374F20035DC6E /* LaunchScreen.storyboard in Resources */,
 				8D6C1514207374F20035DC6E /* Assets.xcassets in Resources */,
+				8D4DA8D42074605B00964D90 /* CustomTableViewCell.xib in Resources */,
 				8D6C1512207374F20035DC6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6C150F207374F20035DC6E /* ViewController.swift in Sources */,
+				8D4DA8D82074619300964D90 /* City.swift in Sources */,
+				8D4DA8D02074603500964D90 /* TableViewController.swift in Sources */,
+				8D4DA8D32074605B00964D90 /* CustomTableViewCell.swift in Sources */,
 				8D6C150D207374F20035DC6E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
