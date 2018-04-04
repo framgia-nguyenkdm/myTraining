@@ -12,6 +12,7 @@
 		8D4DA8EB20746F3A00964D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4DA8E920746F3A00964D90 /* Main.storyboard */; };
 		8D4DA8ED20746F3A00964D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D4DA8EC20746F3A00964D90 /* Assets.xcassets */; };
 		8D4DA8F020746F3A00964D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4DA8EE20746F3A00964D90 /* LaunchScreen.storyboard */; };
+		8D4DA8F92074795900964D90 /* AccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DA8F82074795900964D90 /* AccessoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8D4DA8EC20746F3A00964D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D4DA8EF20746F3A00964D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D4DA8F120746F3A00964D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4DA8F82074795900964D90 /* AccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				8D4DA8E520746F3A00964D90 /* AppDelegate.swift */,
 				8D4DA8E720746F3A00964D90 /* ViewController.swift */,
+				8D4DA8F82074795900964D90 /* AccessoryViewController.swift */,
 				8D4DA8E920746F3A00964D90 /* Main.storyboard */,
 				8D4DA8EC20746F3A00964D90 /* Assets.xcassets */,
 				8D4DA8EE20746F3A00964D90 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				8D4DA8E820746F3A00964D90 /* ViewController.swift in Sources */,
 				8D4DA8E620746F3A00964D90 /* AppDelegate.swift in Sources */,
+				8D4DA8F92074795900964D90 /* AccessoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
