@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSOperation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-L3-yqB">
+                                <rect key="frame" x="20" y="547" width="157.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xqV-YI-nBL"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="tapDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BK1-4M-Q5u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkL-oF-AWM">
+                                <rect key="frame" x="197.5" y="547" width="157.5" height="40"/>
+                                <state key="normal" title="Cancel Download"/>
+                                <connections>
+                                    <action selector="tapCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z78-Zt-Fpb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ga-vP-Cmh">
+                                <rect key="frame" x="50" y="40" width="275" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Dqe-8J-zfi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-c3-hyu">
+                                <rect key="frame" x="50" y="188" width="275" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="wd6-ND-Onz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un2-0B-W8Z">
+                                <rect key="frame" x="50" y="336" width="275" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3Ra-RV-bt6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k7X-c3-hyu" firstAttribute="top" secondItem="5ga-vP-Cmh" secondAttribute="bottom" constant="8" id="6Bx-Y8-yP3"/>
+                            <constraint firstItem="k7X-c3-hyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="GtD-v2-Eyz"/>
+                            <constraint firstItem="5ga-vP-Cmh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HRC-gV-Tdy"/>
+                            <constraint firstItem="VkL-oF-AWM" firstAttribute="height" secondItem="Ueo-L3-yqB" secondAttribute="height" id="Iwe-AE-GMd"/>
+                            <constraint firstItem="5ga-vP-Cmh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="XNn-xI-3o5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ga-vP-Cmh" secondAttribute="trailing" constant="50" id="gWc-Zk-NpL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="un2-0B-W8Z" secondAttribute="trailing" constant="50" id="gqZ-IC-DIP"/>
+                            <constraint firstItem="un2-0B-W8Z" firstAttribute="top" secondItem="k7X-c3-hyu" secondAttribute="bottom" constant="8" id="hxt-do-iRC"/>
+                            <constraint firstItem="un2-0B-W8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kzT-AW-08h"/>
+                            <constraint firstItem="VkL-oF-AWM" firstAttribute="width" secondItem="Ueo-L3-yqB" secondAttribute="width" id="lTc-UU-WoN"/>
+                            <constraint firstItem="Ueo-L3-yqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lqN-Ee-lTv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VkL-oF-AWM" secondAttribute="trailing" constant="20" id="oAK-aG-fZn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ueo-L3-yqB" secondAttribute="bottom" constant="80" id="od1-K2-YQz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7X-c3-hyu" secondAttribute="trailing" constant="50" id="q98-pv-tX4"/>
+                            <constraint firstItem="VkL-oF-AWM" firstAttribute="leading" secondItem="Ueo-L3-yqB" secondAttribute="trailing" constant="20" id="rTv-ol-B1V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VkL-oF-AWM" secondAttribute="bottom" constant="80" id="vtw-CK-QlZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView1" destination="5ga-vP-Cmh" id="XnQ-kK-qP7"/>
+                        <outlet property="imgView2" destination="k7X-c3-hyu" id="uj4-uk-274"/>
+                        <outlet property="imgView3" destination="un2-0B-W8Z" id="wu0-dN-Bie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
