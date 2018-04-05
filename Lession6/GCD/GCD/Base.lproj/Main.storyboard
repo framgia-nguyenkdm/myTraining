@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Frp-4j-EtV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GCD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-7P-OT7">
+                                <rect key="frame" x="70" y="70" width="235" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="bbJ-dx-6Zy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ZL-BS-SBt">
+                                <rect key="frame" x="70" y="230" width="235" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="q1C-LD-JGv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oYh-uO-g6q">
+                                <rect key="frame" x="70" y="390" width="235" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="SrK-OE-oXr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Ba-7P-OT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="4DZ-fq-c0O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ba-7P-OT7" secondAttribute="trailing" constant="70" id="Aec-Gl-9Pc"/>
+                            <constraint firstItem="5ZL-BS-SBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Dhi-4J-OH6"/>
+                            <constraint firstItem="oYh-uO-g6q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Kab-ao-lzZ"/>
+                            <constraint firstItem="0Ba-7P-OT7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Kax-JE-sdj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ZL-BS-SBt" secondAttribute="trailing" constant="70" id="U0j-Bo-Mcl"/>
+                            <constraint firstItem="5ZL-BS-SBt" firstAttribute="top" secondItem="0Ba-7P-OT7" secondAttribute="bottom" constant="30" id="ebY-TA-OAx"/>
+                            <constraint firstItem="oYh-uO-g6q" firstAttribute="top" secondItem="5ZL-BS-SBt" secondAttribute="bottom" constant="30" id="hVY-Cr-deM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oYh-uO-g6q" secondAttribute="trailing" constant="70" id="oWJ-DO-k2u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView1" destination="0Ba-7P-OT7" id="4WJ-l1-elG"/>
+                        <outlet property="imgView2" destination="5ZL-BS-SBt" id="L2s-pI-fVz"/>
+                        <outlet property="imgView3" destination="oYh-uO-g6q" id="ezn-Zp-uFc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="399" y="49"/>
+        </scene>
+        <!--ViewB Controller-->
+        <scene sceneID="1sx-CH-H9M">
+            <objects>
+                <viewController id="Frp-4j-EtV" customClass="ViewBController" customModule="GCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C5T-fG-eVN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZ4-n4-7d2">
+                                <rect key="frame" x="37" y="268.5" width="300" height="150"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="51Y-gx-yFg"/>
+                                    <constraint firstAttribute="width" constant="300" id="qY1-EZ-3tp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DZ4-n4-7d2" firstAttribute="centerY" secondItem="PXl-3K-YFZ" secondAttribute="centerY" id="ZBY-eR-Cb7"/>
+                            <constraint firstItem="DZ4-n4-7d2" firstAttribute="centerX" secondItem="PXl-3K-YFZ" secondAttribute="centerX" id="ZR9-ze-Yk3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PXl-3K-YFZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="DZ4-n4-7d2" id="xyy-hC-6AB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MF-Mo-s7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="48"/>
         </scene>
     </scenes>
 </document>
